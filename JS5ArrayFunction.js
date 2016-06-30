@@ -1,13 +1,13 @@
-+++ JS中some(),every(),forEach(),map(),filter()区别 +++
+// +++ JS中some(),every(),forEach(),map(),filter()区别 +++
 
-----函数简述----
-map():返回一个新的Array，每个元素为调用func的结果
-filter():返回一个符合func条件的元素数组
-some():返回一个boolean，判断是否有元素是否符合func条件
-every():返回一个boolean，判断每个元素是否符合func条件
-forEach():没有返回值，只是针对每个元素调用func
+// ----函数简述----
+// map():返回一个新的Array，每个元素为调用func的结果
+// filter():返回一个符合func条件的元素数组
+// some():返回一个boolean，判断是否有元素是否符合func条件
+// every():返回一个boolean，判断每个元素是否符合func条件
+// forEach():没有返回值，只是针对每个元素调用func
 
-----API的区别----
+// ----API的区别----
 function my_func(item) {
   if (item == 1) {
     console.log('t');
@@ -42,7 +42,7 @@ l.every(my_func)
 l.forEach(my_func)
 
 
-----内部实现----
+// ----内部实现----
 
 // From：http://developer.mozilla.org
 
@@ -130,4 +130,4 @@ Array.prototype.forEach = function(fun /*, thisp*/)
   }
 };
 
-----引用自：http://blog.csdn.net/github_31392345/article/details/48631067----
+// ----引用自：http://blog.csdn.net/github_31392345/article/details/48631067----
