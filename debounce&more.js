@@ -66,7 +66,8 @@ document.addEventListener('DOMContentLoaded', function() {
 
 // 这个问题常见（不正确）的实现是这样：
 
-const arr = [10, 12, 15, 21];for (var i = 0; i < arr.length; i++) {
+const arr = [10, 12, 15, 21];
+for (var i = 0; i < arr.length; i++) {
   setTimeout(function() {
     console.log('The index of this number is: ' + i);
   }, 3000);
@@ -80,7 +81,8 @@ const arr = [10, 12, 15, 21];for (var i = 0; i < arr.length; i++) {
 
 // 实际上有好几种方法能正确解决这个问题。这里有两个：
 
-const arr = [10, 12, 15, 21];for (var i = 0; i < arr.length; i++) {
+const arr = [10, 12, 15, 21];
+for (var i = 0; i < arr.length; i++) {
   // 给每个函数传入变量 i 让其能访问正确的索引
   setTimeout(function(i_local) {
     return function() {
@@ -88,7 +90,9 @@ const arr = [10, 12, 15, 21];for (var i = 0; i < arr.length; i++) {
     }
   }(i), 3000);
 }
-const arr = [10, 12, 15, 21];for (let i = 0; i < arr.length; i++) {
+
+const arr = [10, 12, 15, 21];
+for (let i = 0; i < arr.length; i++) {
   // 使用 ES6 中的 let 关键字，它会在函数调用时创建一个新的绑定
   // 了解更多：http://exploringjs.com/es6/ch_variables.html#sec_let-const-loop-heads
   setTimeout(function() {
